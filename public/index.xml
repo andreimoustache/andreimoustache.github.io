@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>a moustache</title>
+    <link>http://andreimoustache.github.io/</link>
+    <description>Recent content on a moustache</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 May 2019 19:10:03 +0300</lastBuildDate>
+    
+	<atom:link href="http://andreimoustache.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Provisioning Azure</title>
+      <link>http://andreimoustache.github.io/slides/provisioning-azure/</link>
+      <pubDate>Sat, 04 May 2019 19:10:03 +0300</pubDate>
+      
+      <guid>http://andreimoustache.github.io/slides/provisioning-azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wat</title>
+      <link>http://andreimoustache.github.io/wat/</link>
+      <pubDate>Tue, 23 Apr 2019 05:30:01 +0000</pubDate>
+      
+      <guid>http://andreimoustache.github.io/wat/</guid>
+      <description>Hi, I&amp;rsquo;m 12 and what is this</description>
+    </item>
+    
+  </channel>
+</rss>
