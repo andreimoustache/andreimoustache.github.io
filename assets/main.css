@@ -1,4 +1,6 @@
 body {
+    height: 100vh;
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -9,6 +11,9 @@ body {
 
     font-family: 'EB Garamond', serif;
     font-weight: 100;
+
+    background-color: #fff;
+    color: #3f3f3f;
 }
 
 footer {
@@ -22,17 +27,23 @@ footer {
 
 ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: column;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 
     list-style: none;
     padding: 0;
-
-    font-size: 2.5em;
 }
 
 li {
     justify-self: center;
+}
+
+.double-text {
+    font-size: 2.5em;
+}
+
+a:hover {
+    color: #000;
 }
