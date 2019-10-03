@@ -12,6 +12,7 @@
                 'cookie_expires': 60 * 60 * 24 * 30
             }
         );
+        console.log('loading GA')
     };
 
     const isDNTEnabled = (
@@ -21,9 +22,14 @@
         navigator.msDoNotTrack == "1" || 
         ('msTrackingProtectionEnabled' in window.external && window.external.msTrackingProtectionEnabled())
     );
-    
-    if (!isDNTEnabled) {
-        loadGA();
-    }
+
+    window.addEventListener(
+        'CookiebotOnAccept',
+        (e) => {
+            if (Cookiebot.consented && !isDNTEnabled) {
+                loadGA();
+            }
+        },
+        false);
 
 })();
