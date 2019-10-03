@@ -7,5 +7,16 @@
         gtag('config', 'UA-3938207-9', { 'anonymize_ip': true });
     };
 
-    loadGA();
+    const isDNTEnabled = (
+        window.doNotTrack == "1" || 
+        navigator.doNotTrack == "yes" || 
+        navigator.doNotTrack == "1" || 
+        navigator.msDoNotTrack == "1" || 
+        ('msTrackingProtectionEnabled' in window.external && window.external.msTrackingProtectionEnabled())
+    );
+    
+    if (!isDNTEnabled) {
+        loadGA();
+    }
+
 })();
