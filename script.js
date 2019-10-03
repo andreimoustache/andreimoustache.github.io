@@ -4,7 +4,14 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-3938207-9', { 'anonymize_ip': true });
+        gtag(
+            'config',
+            'UA-3938207-9',
+            {
+                'anonymize_ip': true,
+                'cookie_expires': 60 * 60 * 24 * 30
+            }
+        );
     };
 
     const isDNTEnabled = (
