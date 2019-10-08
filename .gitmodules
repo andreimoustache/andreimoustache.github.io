@@ -1,0 +1,3 @@
+[submodule "themes/moustachioed"]
+	path = themes/moustachioed
+	url = https://github.com/andreimoustache/hugo-theme-moustachioed.git

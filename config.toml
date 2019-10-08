@@ -1,0 +1,28 @@
+baseURL = "https://amoustache.net/"
+languageCode = "en-us"
+theme = "moustachioed"
+
+title = "I am A. Moustache."
+copyright = "Made with 🍤 🍚."
+
+[params]
+fontawesome = "87ac18817c"
+description = "Andrei Mustață (Moustache) is a software engineer."
+subtitle = "& this is my stuff"
+cookiebotid = "dd5dc4b4-b6c7-49df-b9e2-feabef0843f8"
+googleanalyticstrackingid = "UA-3938207-9"
+
+[[params.links]]
+url = "https://linkedin.com/in/andreimustata"
+name = "Andrei Mustață on LinkedIn"
+fa_logo = "linkedin"
+
+[[params.links]]
+url = "https://github.com/andreimoustache"
+name = "Andrei Mustață on GitHub"
+fa_logo = "github"
+
+[[params.links]]
+url = "http://twitter.com/andreimoustache"
+name = "Andrei Mustață on Twitter"
+fa_logo = "twitter"
