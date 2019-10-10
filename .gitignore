@@ -15,3 +15,9 @@ Session.vim
 tags
 # Persistent undo
 [._]*.un~
+
+# Generated files
+public
+
+# Hugo-related
+themes
