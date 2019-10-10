@@ -1,6 +1,7 @@
 baseURL = "https://amoustache.net/"
 languageCode = "en-us"
 theme = "moustachioed"
+enableEmoji = true
 
 title = "I am A. Moustache."
 copyright = "Made with 🍤 🍚."
