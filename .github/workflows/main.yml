@@ -1,27 +1,25 @@
-name: Generate and publish static site
+name: CI
 
 on:
   push:
     branches:
-    - content
+      - content
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v1
       with:
         submodules: true
-
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2.2.2
+      uses: peaceiris/actions-hugo@v2.2.3
       with:
         hugo-version: 'latest'
-
-    - name: Build
+    - name: Build site
       run: hugo --gc --minify --cleanDestinationDir
-
-    - name: Deploy
+    - name: Deploy site
       uses: peaceiris/actions-gh-pages@v2.5.0
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
