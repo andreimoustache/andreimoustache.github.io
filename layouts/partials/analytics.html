@@ -1,0 +1,43 @@
+
+    <script src="https://consent.cookiebot.com/uc.js"
+        id="Cookiebot"
+        data-cbid="{{ .cbid }}"
+        data-blockingmode="auto" type="text/javascript">
+    </script>
+    <script src="https://www.googletagmanager.com/gtag/js?id={{ .gaid }}"
+        async>
+    </script>
+
+    <script data-cookieconsent="statistics">
+
+        const loadGA = () => {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag(
+                'config',
+                '{{ .gaid }}',
+                {
+                    'anonymize_ip': true,
+                    'cookie_expires': 60 * 60 * 24 * 30
+                }
+            );
+        };
+
+        const isDNTEnabled = (
+            window.doNotTrack == "1" || 
+            navigator.doNotTrack == "yes" || 
+            navigator.doNotTrack == "1" || 
+            navigator.msDoNotTrack == "1" || 
+            ('msTrackingProtectionEnabled' in window.external && window.external.msTrackingProtectionEnabled())
+        );
+
+        window.addEventListener(
+            'CookiebotOnAccept',
+            (e) => {
+                if (Cookiebot.consented && !isDNTEnabled) {
+                    loadGA();
+                }
+            },
+            false);
+    </script>

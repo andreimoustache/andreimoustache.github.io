@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="columns">
+        <div class="column is-two-thirds">
+          <article class="content">
+            <h1 class="title">{{ .Title }}</h1>
+            {{ .Content }}
+            <footer>
+              <p class="half-text end-text">
+                Published in
+                <time datetime="{{ .PublishDate }}"
+                  >{{ .PublishDate.Format "January 2006" }}</time
+                >.
+              </p>
+            </footer>
+          </article>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

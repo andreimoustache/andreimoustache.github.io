@@ -1,0 +1,33 @@
+
+<head>
+    <meta charset="utf-8">
+    {{ $title := print .Title " | " .Site.Title }}
+    {{ $description := .Description | default .Site.Params.description }}
+    {{ if .IsHome }}
+        {{ $title = .Site.Title }}
+    {{ end }}
+    <title>{{ $title }}</title>
+    <meta name="title" content="{{ $title }}">
+    <meta name="description" content="{{ $description }}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:title" content="{{ $title }}">
+    <meta property="og:description" content="{{ $description }}">
+
+    <meta property="twitter:url" content="{{ .Permalink }}">
+    <meta property="twitter:title" content="{{ $title }}">
+    <meta property="twitter:description" content="{{ $description }}">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="//fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/{{ .Site.Params.Fontawesome }}.js"></script>
+
+    {{ if and (isset .Site.Params "cookiebotid") (isset .Site.Params "googleanalyticstrackingid") }}
+        {{ partial "analytics.html" (dict "cbid" .Site.Params.cookiebotid "gaid" .Site.Params.googleanalyticstrackingid) }}
+    {{ end }}
+</head>

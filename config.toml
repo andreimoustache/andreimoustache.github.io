@@ -1,6 +1,5 @@
 baseURL = "https://amoustache.net/"
 languageCode = "en-us"
-theme = "moustachioed"
 enableEmoji = true
 
 title = "I am A. Moustache."
@@ -27,3 +26,8 @@ fa_logo = "github"
 url = "http://twitter.com/andreimoustache"
 name = "Andrei Mustață on Twitter"
 fa_logo = "twitter"
+
+[[params.links]]
+url = "https://stackoverflow.com/users/1148483/andrei-mustata"
+name = "Andrei Mustață on StackOverflow"
+fa_logo = "stack-overflow"
