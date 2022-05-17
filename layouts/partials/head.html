@@ -22,9 +22,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link href="//fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+    {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint "md5" }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
+
     <script src="https://kit.fontawesome.com/{{ .Site.Params.Fontawesome }}.js"></script>
 
     {{ if and (isset .Site.Params "cookiebotid") (isset .Site.Params "googleanalyticstrackingid") }}
