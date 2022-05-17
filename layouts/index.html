@@ -1,22 +1,29 @@
 {{ define "main" }}
-    <section class="section">
-      <div class="container">
-        <div class="columns is-multiline">
-        {{ $posts := where .Site.Pages ".Type" "==" "post" }}
-        {{ if gt (len $posts) 0 }}
-        {{ range $posts }}
-            <article class="column is-full content post-summary">
-              <header>
-                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-              </header>
-              <p class="is-italic">{{ .Summary }}</p>
-              <footer class="is-size-7">
-                <p>Published in <time datetime="{{ .PublishDate }}">{{ .PublishDate.Format "January 2006" }}</time>.</p>
-              </footer>
-            </article>
-        {{ end }}
-        {{ end }}
-        </div>
-      </div>
-    </section>
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      {{ $posts := where .Site.Pages ".Type" "==" "post" }} {{ if gt (len
+      $posts) 0 }} {{ range $posts }}
+      <article class="column is-full">
+        <header>
+          <h2 class="title is-3">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h2>
+        </header>
+        <section class="content">
+          <p class="is-italic">{{ .Summary }}</p>
+        </section>
+        <footer>
+          <p class="is-size-7">
+            Published in
+            <time datetime="{{ .PublishDate }}"
+              >{{ .PublishDate.Format "January 2006" }}</time
+            >.
+          </p>
+        </footer>
+      </article>
+      {{ end }} {{ end }}
+    </div>
+  </div>
+</section>
 {{ end }}

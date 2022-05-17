@@ -5,7 +5,7 @@
   "description": "",
   "license": "ISC",
   "scripts": {
-    "build:css": "sass assets/scss/main.scss assets/css/main.css"
+    "build": "hugo"
   },
   "repository": {
     "type": "git",

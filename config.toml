@@ -5,6 +5,9 @@ enableEmoji = true
 title = "I am A. Moustache."
 copyright = "Made with 🍤 🍚."
 
+[build]
+writeStats = true
+
 [params]
 fontawesome = "87ac18817c"
 description = "Andrei Mustață (Moustache) is a software engineer, and this is his blog."
