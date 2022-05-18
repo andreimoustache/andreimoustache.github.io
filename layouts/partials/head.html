@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="//fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
-    {{ $style := resources.Get "scss/main.scss" | toCSS | postCSS |  minify | fingerprint "md5" }}
+    {{ $style := resources.Get "scss/main.scss" | toCSS |  minify | fingerprint "md5" }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
 
     <script src="https://kit.fontawesome.com/{{ .Site.Params.Fontawesome }}.js"></script>
