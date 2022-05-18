@@ -1,6 +1,8 @@
+const purgecss = require('@fullhuman/postcss-purgecss')
+
 module.exports = {
-  plugins: {
-    '@fullhuman/postcss-purgecss': {
+  plugins: [
+    purgecss({
       content: [
         './hugo_stats.json'
       ],
@@ -13,6 +15,6 @@ module.exports = {
         ];
       },
       safelist: []
-    }
-  }
+    })
+  ]
 };
