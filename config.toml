@@ -12,8 +12,6 @@ writeStats = true
 fontawesome = "87ac18817c"
 description = "Andrei Mustață (Moustache) is a software engineer, and this is his blog."
 subtitle = "& this is my stuff"
-cookiebotid = "dd5dc4b4-b6c7-49df-b9e2-feabef0843f8"
-googleanalyticstrackingid = "UA-3938207-9"
 
 [[params.links]]
 url = "https://linkedin.com/in/andreimustata"
@@ -24,11 +22,6 @@ fa_logo = "linkedin"
 url = "https://github.com/andreimoustache"
 name = "Andrei Mustață on GitHub"
 fa_logo = "github"
-
-[[params.links]]
-url = "http://twitter.com/andreimoustache"
-name = "Andrei Mustață on Twitter"
-fa_logo = "twitter"
 
 [[params.links]]
 url = "https://stackoverflow.com/users/1148483/andrei-mustata"
