@@ -2,7 +2,19 @@
 module.exports = {
   content: ["content/**/*.md", "layouts/**/*.html"],
   theme: {
-    extend: {},
+    fontFamily: {
+      'serif': 'Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif'
+    },
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            '--tw-prose-code': theme('colors.pink[900]'),
+          }
+        }
+      })
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'),
+  ],
 };
