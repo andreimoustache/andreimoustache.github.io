@@ -11,19 +11,22 @@ writeStats = true
 [params]
 fontawesome = "87ac18817c"
 description = "Andrei Mustață (Moustache) is a software engineer, and this is his blog."
-subtitle = "& this is my stuff"
+subtitle = "& this is my stuff:"
 
 [[params.links]]
 url = "https://linkedin.com/in/andreimustata"
 name = "Andrei Mustață on LinkedIn"
+display_name = "on LinkedIn"
 fa_logo = "linkedin"
 
 [[params.links]]
 url = "https://github.com/andreimoustache"
 name = "Andrei Mustață on GitHub"
+display_name = "on GitHub"
 fa_logo = "github"
 
 [[params.links]]
 url = "https://stackoverflow.com/users/1148483/andrei-mustata"
 name = "Andrei Mustață on StackOverflow"
+display_name = "on StackOverflow"
 fa_logo = "stack-overflow"

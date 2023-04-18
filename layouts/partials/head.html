@@ -16,11 +16,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" integrity="sha384-QFjvi8Dd1AD+gLVX8Ex4xdvwiMX2fZJ4I4TBe6BJ/wEt28tyR2GExItaFRB9i5HU" crossorigin="anonymous">
-    {{ $style := resources.Get "scss/main.scss" | toCSS |  minify | fingerprint "md5" }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
-
-    <script src="https://kit.fontawesome.com/{{ .Site.Params.Fontawesome }}.js" integrity="sha384-5f06QuIfAd8d5t6ZwgzpfEiXpoRTxgxlOo+5SuRtHgTTomXg9CxzBp9Hl5Gx7cfu" crossorigin="anonymous"></script>
+    {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./postcss.config.js") }}
+    {{- if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    {{ else }}
+    {{- $style := $style | minify | fingerprint | resources.PostProcess -}}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+    {{ end -}}
 
     {{ if and (isset .Site.Params "cookiebotid") (isset .Site.Params "googleanalyticstrackingid") }}
         {{ partial "analytics.html" (dict "cbid" .Site.Params.cookiebotid "gaid" .Site.Params.googleanalyticstrackingid) }}

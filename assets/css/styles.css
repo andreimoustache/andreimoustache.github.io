@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --what: rgb(63, 63, 63);
+}
