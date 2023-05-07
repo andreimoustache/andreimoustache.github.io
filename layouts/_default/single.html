@@ -1,17 +1,17 @@
 {{ define "main" }}
-<section class="section">
+<section class="">
   <div class="container">
-    <div class="columns">
-        <div class="column is-two-thirds">
+    <div class="">
+        <div class="">
           <article class="">
             <header>
-              <h1 class="title">{{ .Title }}</h1>
+              <h1 class="text-2xl font-serif">{{ .Title }}</h1>
             </header>
-            <section class="content">
+            <section class="prose prose-slate prose-p:mb-1 prose-p:font-serif prose-p:font-thin prose-headings:font-serif text-slate-600">
               {{ .Content }}
             </section>
             <footer class="content">
-              <p class="is-italic">
+              <p class="italic font-serif">
                 Published in
                 <time datetime="{{ .PublishDate }}"
                   >{{ .PublishDate.Format "January 2006" }}</time

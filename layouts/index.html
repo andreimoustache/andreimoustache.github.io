@@ -1,20 +1,20 @@
 {{ define "main" }}
-<section class="section">
+<section class="">
   <div class="container">
-    <div class="columns is-multiline">
+    <div class="">
       {{ $posts := where .Site.Pages ".Type" "==" "post" }} {{ if gt (len
       $posts) 0 }} {{ range $posts }}
-      <article class="column is-full">
+      <article class="">
         <header>
-          <h2 class="title is-3">
+          <h2 class="text-2xl font-serif">
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
           </h2>
         </header>
-        <section class="content">
-          <p class="is-italic">{{ .Summary }}</p>
+        <section class="">
+          <p class="italic">{{ .Summary }}</p>
         </section>
         <footer>
-          <p class="is-size-7">
+          <p class="text-xs">
             Published in
             <time datetime="{{ .PublishDate }}"
               >{{ .PublishDate.Format "January 2006" }}</time
